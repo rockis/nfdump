@@ -3126,3 +3126,11 @@ char 	icmp_port[MAX_STRING_LENGTH];
 } // End of String_natDstAddrPort
 
 #endif
+
+/* Add by Ray Cheung begin */
+static void String_App(master_record_t *r, char *string) {
+    char *appname = Get_app_name(r->application_id);
+    strncpy(string, appname, 16);
+} // End of String_App
+
+/* Add by Ray Cheung end */

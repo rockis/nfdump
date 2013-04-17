@@ -1465,7 +1465,7 @@ char				*string;
 			dbg_printf("[%u] Sampling rate: %llu\n", exporter->info.id, (long long unsigned)sampling_rate);
 		} else {
 			/* Modified by Ray Cheung begin */
-			/sampling_rate = default_sampling;
+			//sampling_rate = default_sampling;
             sampling_rate = GetRouterSamplingRate(fs->ip.v6); 
             /* Modified by Ray Cheung end */
 			dbg_printf("[%u] Sampling ID %u not (yet) available\n", exporter->info.id, sampler_id);
@@ -1481,7 +1481,7 @@ char				*string;
 			dbg_printf("[%u] Std sampling available for this flow source: Rate: %llu\n", exporter->info.id, (long long unsigned)sampling_rate);
 		} else {
 			/* Modified by Ray Cheung begin */
-			/sampling_rate = default_sampling;
+			//sampling_rate = default_sampling;
             sampling_rate = GetRouterSamplingRate(fs->ip.v6); 
             /* Modified by Ray Cheung end */
 			dbg_printf("[%u] No Sampling record found\n", exporter->info.id);

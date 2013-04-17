@@ -237,8 +237,10 @@ char ipstr[IP_STRING_LEN];
 	sampler->next				= NULL;
 
 	// default is global default_sampling ( user defined or unsampled => 1 )
-	if ( sampler->info.interval == 0 )
-		sampler->info.interval = default_sampling;
+	if ( sampler->info.interval == 0 ) {
+		//sampler->info.interval = default_sampling; //modified by Ray Cheung
+        (*e)->sampler->info.interval = GetRouterSamplingRate(fs->ip.v6); 
+	}
 
 	// copy the v5 generic extension map
 	(*e)->extension_map		= (extension_map_t *)malloc(v5_extension_info.map->size);

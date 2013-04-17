@@ -49,9 +49,9 @@ bookkeeper = bookkeeper.c bookkeeper.h
 exporter = exporter.c exporter.h
 expire= expire.c expire.h
 launch = launch.c launch.h
-/* Add by Ray Cheung begin */
+# Add by Ray Cheung begin
 ipconv = ipconv.c ipconv.h
-/* Add by Ray Cheung begin */
+# Add by Ray Cheung end
 
 nfdump_SOURCES = nfdump.c nfdump.h nfstat.c nfstat.h nfexport.c nfexport.h  \
 	$(common) $(nflowcache) $(util) $(filelzo) $(nflist) $(filter) $(nfprof) $(exporter)
